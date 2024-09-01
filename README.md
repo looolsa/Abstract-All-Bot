@@ -1,6 +1,6 @@
 <img src="https://telegra.ph/file/76d4b79df32829d0afd5d.jpg"/>
 
-# `[ 💠 ] 𝙰𝚋𝚜𝚝𝚛𝚊𝚌𝚝 - 𝙰𝚕𝚕 𝙱𝚘𝚝` 
+# `[ 💠 ] 𝙰𝚋𝚜𝚝𝚛𝚊𝚌𝚝-𝙰𝚕𝚕 𝙱𝚘𝚝` 
 ------------------
 
 > **[ 💠 ] Encantado(s) de darte la bienvenida, estimado usuario.**
