@@ -30,9 +30,7 @@ let menuX = `
 ╟⊰ 🝚 _${usedPrefix}ttp3 *<texto>*_
 ╟⊰ 🝚 _${usedPrefix}ttp4 *<texto>*_
 ╟⊰ 🝚 _${usedPrefix}ttp5 *<texto>*_
-╟⊰ 🝚 _${usedPrefix}pat *<@tag>*_
 ╟⊰ 🝚 _${usedPrefix}slap *<@tag>*_
-╟⊰ 🝚 _${usedPrefix}kiss *<@tag>*_
 ╟⊰ 🝚 _${usedPrefix}qc <@tag>*_
 ╟⊰ 🝚 _${usedPrefix}dado_
 ╟⊰ 🝚 _${usedPrefix}wm *<packname> | <author>*_
@@ -69,6 +67,8 @@ let menuX = `
 ╟⊰ ▶︎ _${usedPrefix}chupa *<@tag>*_
 ╟⊰ ▶︎ _${usedPrefix}marron *<@tag>*_
 ╟⊰ ▶︎ _${usedPrefix}cum *<@tag>*_
+╟⊰ ▶︎ _${usedPrefix}kiss *<@tag>*_
+╟⊰ ▶︎ _${usedPrefix}pat *<@tag>*_
 ╟⊰ ▶︎ _${usedPrefix}jalamela *<@tag>*_
 ╟⊰ ▶︎ _${usedPrefix}aplauso *<@tag>*_
 ╟⊰ ▶︎ _${usedPrefix}slot *<apuesta>*_
@@ -195,8 +195,8 @@ let menuX = `
 ╟⊰ 🝤 _${usedPrefix}imagen *<texto>*_
 ╟⊰ 🝤 _${usedPrefix}pinterest *<texto>*_
 ╟⊰ 🝤 _${usedPrefix}wallpaper *<texto>*_
-╟⊰ 🝤 _${usedPrefix}xnxxdl *<enlace / link / url>*_
-╟⊰ 🝤 _${usedPrefix}xvideosdl *<enlace / link / url>*_
+╟⊰ 🝤 _${usedPrefix}xnxxdl *<enlace / link / url> (+18)*_
+╟⊰ 🝤 _${usedPrefix}xvideosdl *<enlace / link / url> (+18)*_
 ╚═══❖•ೋ°ㅤ✚ㅤ°ೋ•❖═══╛
 `.trim()
 await conn.sendFile(m.chat, pp, 'Menu.jpg', menuX, m, null, fkontak)
@@ -213,12 +213,12 @@ let menuX = `
 ╟⊰ 🜤 _${usedPrefix}cuevana *<texto>*_
 ╟⊰ 🜤 _${usedPrefix}pelisplus *<texto>*_
 ╟⊰ 🜤 _${usedPrefix}modapk *<texto>*_
-╟⊰ 🜤 _${usedPrefix}xnxxsearch *<texto>*_
-╟⊰ 🜤 _${usedPrefix}rule34 *<texto>*_
 ╟⊰ 🜤 _${usedPrefix}google *<texto>*_
 ╟⊰ 🜤 _${usedPrefix}wikipedia *<texto>*_
 ╟⊰ 🜤 _${usedPrefix}ytsearch *<texto>*_
 ╟⊰ 🜤 _${usedPrefix}playstore *<texto>*_
+╟⊰ 🜤 _${usedPrefix}xnxxsearch *<texto> (+18)*_
+╟⊰ 🜤 _${usedPrefix}rule34 *<texto> (+18)*_
 ╚═══❖•ೋ°ㅤ✚ㅤ°ೋ•❖═══╛
 `.trim()
 await conn.sendFile(m.chat, pp, 'Menu.jpg', menuX, m, null, fkontak)
@@ -301,8 +301,12 @@ let menuX = `
 ╔═══❖•ೋ°ㅤ✚ㅤ°ೋ•❖═══╕
 ║『 *𝙷 𝙴 𝚁 𝚁 𝙰 𝙼 𝙸 𝙴 𝙽 𝚃 𝙰 𝚂* 』
 ╠═══════════════╧══╕
-╟⊰ ☭ _${usedPrefix}ia *<texto>*_
-╟⊰ ☭ _${usedPrefix}dall-e *<texto>*_
+╟⊰ ☭ _${usedPrefix}chatgpt *<texto>*_
+╟⊰ ☭ _${usedPrefix}delirius *<texto>*_
+╟⊰ ☭ _${usedPrefix}openai *<texto>*_
+╟⊰ ☭ _${usedPrefix}gpt4 *<texto>*_  
+╟⊰ ☭ _${usedPrefix}copilot *<texto>*_
+╟⊰ ☭ _${usedPrefix}gemini *<texto>*_
 ╟⊰ ☭ _${usedPrefix}spamwa *<numero|texto|cantidad>*_
 ╟⊰ ☭ _${usedPrefix}tamaño *<cantidad> <imagen / video>*_
 ╟⊰ ☭ _${usedPrefix}read *<imagen / video>*_
