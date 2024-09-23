@@ -1,6 +1,7 @@
 import fetch from 'node-fetch';
 const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, isPrems}) => {
-if (!db.data.chats[m.chat].modohorny && m.isGroup) throw `*❍💠 𝙿𝚊𝚛𝚊 𝚞𝚝𝚒𝚕𝚒𝚣𝚊𝚛 𝚎𝚜𝚝𝚎 𝚌𝚘𝚖𝚊𝚗𝚍𝚘, 𝚎𝚜 𝚗𝚎𝚌𝚎𝚜𝚊𝚛𝚒𝚘 𝚑𝚊𝚋𝚒𝚕𝚒𝚝𝚊𝚛 𝚕𝚘𝚜 𝚌𝚘𝚖𝚊𝚗𝚍𝚘𝚜 _+18_. 𝙿𝚊𝚛𝚊 𝚊𝚌𝚝𝚒𝚟𝚊𝚛𝚕𝚘𝚜 𝚎𝚗 𝚎𝚜𝚝𝚎 𝚌𝚑𝚊𝚝, 𝚎𝚜𝚌𝚛𝚒𝚋𝚊 _${usedPrefix}enable modohorny_*`; 
+    
+if (!db.data.chats[m.chat].modohorny && m.isGroup) throw global.adult;
   try {
     const pp = imagen5;
     const d = new Date(new Date + 3600000);
@@ -66,10 +67,11 @@ if (!db.data.chats[m.chat].modohorny && m.isGroup) throw `*❍💠 𝙿𝚊𝚛�
       await conn.sendMessage(m.chat, {image: pp, caption: str.trim(), mentions: [...str.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net')}, {quoted: fkontak2});
     }
   } catch {
-    conn.reply(m.chat, '*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝙻 𝙼𝙴𝙽𝚄 𝚃𝙸𝙴𝙽𝙴 𝚄𝙽 𝙴𝚁𝚁𝙾𝚁 𝚈 𝙽𝙾 𝙵𝚄𝙴 𝙿𝙾𝚂𝙸𝙱𝙻𝙴 𝙴𝙽𝚅𝙸𝙰𝚁𝙻𝙾, 𝚁𝙴𝙿𝙾𝚁𝚃𝙴𝙻𝙾 𝙰𝙻 𝙿𝚁𝙾𝙿𝙸𝙴𝚃𝙰𝚁𝙸𝙾 𝙳𝙴𝙻 𝙱𝙾𝚃*', m);
+    conn.reply(global.errori);
   }
 };
 handler.command = /^(menu18|pornito|menuh)$/i;
+handler.owner = true;
 handler.exp = 50;
 handler.fail = null;
 export default handler;
