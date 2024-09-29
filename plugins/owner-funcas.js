@@ -1,7 +1,7 @@
 const handler = async (m, {conn, command}) => {
-  console.log('XDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD');
-  m.reply('No funca bb');
+  console.log(`/////////////////////////////////////////////////////////////////\n\nEl único reporte con fallos en este comando, no se presenta aquí.\n\n/////////////////////////////////////////////////////////////////`);
+  m.reply('*[ 💠 ] No funca bb.*');
 };
-handler.command = /^(handerror)$/i;
+handler.command = /^(funcas)$/i;
 handler.owner = true;
 export default handler;
