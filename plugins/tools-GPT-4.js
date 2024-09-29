@@ -1,5 +1,5 @@
 let handler = async (m, { text, usedPrefix, command }) => {
-  if (!text) throw `*[ 💠 ] Ingresa una petición para acceder al GPT-4.*`;
+  if (!text) throw `*[ 💠 ] Ingresa una petición para interactuar con GPT-4*`;
 
 const syms1 = `Actuaras como un Bot de WhatsApp.`
 let a = await fetch(`https://api.cafirexos.com/api/chatgpt?text=${text}&name=${m.name}&prompt=${syms1}`)
