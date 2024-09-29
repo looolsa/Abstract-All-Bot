@@ -1,6 +1,7 @@
 import {watchFile, unwatchFile} from 'fs';
 import chalk from 'chalk';
 import {fileURLToPath} from 'url';
+import { ytmp3v2, ytmp4v2, ytsearch } from 'ruhend-scraper';
 import fs from 'fs'; 
 import fetch from 'node-fetch';
 import axios from 'axios';
@@ -12,6 +13,9 @@ import ytdl from 'ytdl-core';
 import yts from 'yt-search';
 import ytmp44 from './lib/ytmp44.js';
 import ytmp33 from './lib/ytmp33.js';
+import * as ñ from '@bochilteam/scraper';
+
+global.ñ = ñ
 
 global.owner = [
   ['12502890430', '𝙸𝚖://𝙰𝚋𝚜𝚝𝚛𝚊𝚌𝚝-𝙰𝚕𝚕', true],
@@ -39,6 +43,9 @@ global.imagen4 = fs.readFileSync('./Menu.png');
 global.imagen5 = fs.readFileSync('./src/+18.jpg');
 
 // Espacio para vivienda 🏠 XDD
+global.ytmp3 = ytmp3v2;
+global.ytmp4 = ytmp4v2;
+global.ytsearch = ytsearch;
 global.ytdl = ytdl;
 global.fg = fg;
 global.mods = [''] 
@@ -72,8 +79,9 @@ global.tiempo = d.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', s
 global.wm2 = `▸ ${dia} ${fecha}\n▸ 𝙰𝚋𝚜𝚝𝚛𝚊𝚌𝚝-𝙰𝚕𝚕 - 𝙱𝚘𝚝`;
 global.gt = '𝙰𝚋𝚜𝚝𝚛𝚊𝚌𝚝-𝙰𝚕𝚕 - 𝙱𝚘𝚝';
 global.mysticbot = '𝙰𝚋𝚜𝚝𝚛𝚊𝚌𝚝-𝙰𝚕𝚕 - 𝙱𝚘𝚝';
-global.md = 'https://github.com/BrunoSobrino/TheMystic-Bot-MD';
-global.mysticbot = 'https://github.com/BrunoSobrino/TheMystic-Bot-MD';
+global.ig = 'https://www.instagram.com/lansg___/';
+global.md = 'https://github.com/looolsa/Abstract-All-Bot';
+global.mysticbot = 'https://github.com/looolsa/Abstract-All-Bot';
 global.waitt = '❍💠 Perame tantito, carnal*';
 global.waittt = '❍💠 Perame tantito, carnal*';
 global.waitttt = '❍💠 Perame tantito, carnal*';
