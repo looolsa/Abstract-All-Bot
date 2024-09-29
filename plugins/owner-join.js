@@ -11,11 +11,13 @@ let res = await conn.groupAcceptInvite(code)
 const data = global.owner.filter(([number, _, isDeveloper]) => isDeveloper && number)
 await delay(1 * 1000)
 await m.reply(`*[ 💠 ] Su enlace fue enviado a mi creador para su verificación.*
+
 _⚕️.- Tenga paciencia, mi creador suele tardar un poco en aprobar las solicitudes, y por si alguna razón, tu grupo nunca es aceptado, puede ser por las siguientes razones:_
 
 *▫️.- El bot estuvo en tu chat y fue eliminado con anterioridad.*
 *▫️.- Tu chat activó la aprobación de miembros y el número aún no es aceptado.*
-*▫️.- El bot alcanzó el límite de chats grupales.*`) 
+*▫️.- El bot alcanzó el límite de chats grupales.*
+*▫️.- Su grupo cuenta con menos de 15 integrantes.*`) 
 await delay(2 * 2000)
 for (let jid of data.map(([id]) => [id] + '@s.whatsapp.net').filter(v => v != conn.user.jid)) m.reply(`*[ 💠 ] Nueva solicitud de ingreso:*\n\n*_⚕️.- Número solicitante:_*\n` + ' wa.me/' + m.sender.split('@')[0] + '\n\n*_▫️.- Enlace del grupo:_*\n ' + link, jid)}}
 handler.help = ['join [chat.whatsapp.com]']
