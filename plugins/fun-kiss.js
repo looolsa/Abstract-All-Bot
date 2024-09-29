@@ -15,14 +15,15 @@ if (!who) throw `Ingresa el tag de alguien o responde a un mensaje`;
         'https://telegra.ph/file/613915bb5bc174614e062.mp4',
         'https://telegra.ph/file/2b4feea426593d18e6854.mp4'
     ]
-    const mmscg = [
+    const mmsg = [
         'LE DIÓ UN BESO A',
+        'SE ESTÁ BESANDO CON',
         'SE BESUQUEÓ CON',
         'LE ROBÓ UN BESO A',
         'LE PLANTÓ UN BESOTE A'
     ]
     let url = pickRandom(links);
-const caption = `*[ 💋 ] @${m.sender.split('@')[0]} `+ mmscg.getRandom()+` @${who.split('@')[0]}*`;
+const caption = `*[ 💋 ] @${m.sender.split('@')[0]} `+ mmsg.getRandom() + ` @${who.split('@')[0]}*`;
 	if (!who) throw `Pon el tag`;
 	await conn.sendMessage(m.chat, { video: { url:url }, gifPlayback: true, caption: caption, mentions: conn.parseMention(caption) }, m);
 };
