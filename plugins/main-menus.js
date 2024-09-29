@@ -6,7 +6,6 @@ let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? c
 let mentionedJid = [who]
 let username = conn.getName(who)
 let user = global.db.data.users[m.sender]
-
 let pp = imagen1
 let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
 
@@ -38,7 +37,7 @@ let menuX = `
 ╟⊰ 🝚 _${usedPrefix}stickerfilter *<efecto> <imagen>*_
 ╚═══❖•ೋ°ㅤ✚ㅤ°ೋ•❖═══╛
 `.trim()
-await conn.sendFile(m.chat, pp, 'Menu.jpg', menuX, m, null, fkontak)
+await conn.sendMessage(m.chat, {image: pp, caption: menuX}, {quoted: fkontak});
 } 
     if (command == 'menujuegos' || (command == 'menujs')){
 let menuX = `
@@ -85,7 +84,7 @@ let menuX = `
 ╟⊰ ▶︎ _${usedPrefix}wordfind_
 ╚═══❖•ೋ°ㅤ✚ㅤ°ೋ•❖═══╛
 `.trim()
-await conn.sendFile(m.chat, pp, 'Menu.jpg', menuX, m, null, fkontak)
+await conn.sendMessage(m.chat, {image: pp, caption: menuX}, {quoted: fkontak});
 }
     if (command == 'menufr' || (command == 'menufrases')) {
 let menuX = `
@@ -102,7 +101,7 @@ let menuX = `
 ╟⊰➺ _${usedPrefix}historiaromantica_
 ╚═══❖•ೋ°ㅤ✚ㅤ°ೋ•❖═══╛
 `.trim()
-await conn.sendFile(m.chat, pp, 'Menu.jpg', menuX, m, null, fkontak)
+await conn.sendMessage(m.chat, {image: pp, caption: menuX}, {quoted: fkontak});
 }
     if (command == 'menugc' || (command == 'menugrupos')) {
 let menuX = `
@@ -141,7 +140,7 @@ let menuX = `
 ╟⊰ 🜒 _admins *<texto>* *(𝚄𝚜𝚘 𝚂𝚒𝚗 𝙿𝚛𝚎𝚏𝚒𝚓𝚘)*_
 ╚═══❖•ೋ°ㅤ✚ㅤ°ೋ•❖═══╛
 `.trim()
-await conn.sendFile(m.chat, pp, 'Menu.jpg', menuX, m, null, fkontak)
+await conn.sendMessage(m.chat, {image: pp, caption: menuX}, {quoted: fkontak});
 }
     if (command == 'menuonoff' || (command == 'menued')) {
 let menuX = `
@@ -166,7 +165,7 @@ let menuX = `
 ╟⊰ ꖅ _${usedPrefix}enable/disable *antiarabes*_
 ╚═══❖•ೋ°ㅤ✚ㅤ°ೋ•❖═══╛
 `.trim()
-await conn.sendFile(m.chat, pp, 'Menu.jpg', menuX, m, null, fkontak)
+await conn.sendMessage(m.chat, {image: pp, caption: menuX}, {quoted: fkontak});
 }
     if (command == 'menudl' || (command == 'menudescargas')) {
 let menuX = `
@@ -179,10 +178,12 @@ let menuX = `
 ╠═══════════════╧══╕
 ╟⊰ 🝤 _${usedPrefix}play *<texto>*_
 ╟⊰ 🝤 _${usedPrefix}playvid *<texto>*_
-╟⊰ 🝤 _${usedPrefix}pl *<enlace>*_
-╟⊰ 🝤 _${usedPrefix}pl2 *<enlace>*_
+╟⊰ 🝤 _${usedPrefix}pla *<texto>*_
+╟⊰ 🝤 _${usedPrefix}plavid *<texto>*_
 ╟⊰ 🝤 _${usedPrefix}playd *<texto>*_
 ╟⊰ 🝤 _${usedPrefix}playvd *<texto>*_
+╟⊰ 🝤 _${usedPrefix}ytmp3 *<enlace>*_
+╟⊰ 🝤 _${usedPrefix}ytmp4 *<enlace>*_
 ╟⊰ 🝤 _${usedPrefix}gitclone *<enlace / link / url>*_
 ╟⊰ 🝤 _${usedPrefix}mediafire *<enlace / link / url>*_
 ╟⊰ 🝤 _${usedPrefix}gdrive *<enlace / link / url>*_
@@ -191,7 +192,6 @@ let menuX = `
 ╟⊰ 🝤 _${usedPrefix}ig *<enlace / link / url>*_
 ╟⊰ 🝤 _${usedPrefix}tiktok *<enlace / link / url>*_
 ╟⊰ 🝤 _${usedPrefix}dapk2 *<enlace / link / url>*_
-╟⊰ 🝤 _${usedPrefix}spotify *<texto>*_
 ╟⊰ 🝤 _${usedPrefix}imagen *<texto>*_
 ╟⊰ 🝤 _${usedPrefix}pinterest *<texto>*_
 ╟⊰ 🝤 _${usedPrefix}wallpaper *<texto>*_
@@ -199,7 +199,7 @@ let menuX = `
 ╟⊰ 🝤 _${usedPrefix}xvideosdl *<enlace / link / url> (+18)*_
 ╚═══❖•ೋ°ㅤ✚ㅤ°ೋ•❖═══╛
 `.trim()
-await conn.sendFile(m.chat, pp, 'Menu.jpg', menuX, m, null, fkontak)
+await conn.sendMessage(m.chat, {image: pp, caption: menuX}, {quoted: fkontak});
 }
     if (command == 'menubuscadores' || (command == 'menubs')) {
 let menuX = `
@@ -210,8 +210,6 @@ let menuX = `
 ╔═══❖•ೋ°ㅤ✚ㅤ°ೋ•❖═══╕
 ║『 *𝙱 𝚄 𝚂 𝙲 𝙰 𝙳 𝙾 𝚁 𝙴 𝚂* 』
 ╠═══════════════╧══╕
-╟⊰ 🜤 _${usedPrefix}cuevana *<texto>*_
-╟⊰ 🜤 _${usedPrefix}pelisplus *<texto>*_
 ╟⊰ 🜤 _${usedPrefix}modapk *<texto>*_
 ╟⊰ 🜤 _${usedPrefix}google *<texto>*_
 ╟⊰ 🜤 _${usedPrefix}wikipedia *<texto>*_
@@ -221,7 +219,7 @@ let menuX = `
 ╟⊰ 🜤 _${usedPrefix}rule34 *<texto> (+18)*_
 ╚═══❖•ೋ°ㅤ✚ㅤ°ೋ•❖═══╛
 `.trim()
-await conn.sendFile(m.chat, pp, 'Menu.jpg', menuX, m, null, fkontak)
+await conn.sendMessage(m.chat, {image: pp, caption: menuX}, {quoted: fkontak});
 }
     if (command == 'menuconvertidor' || (command == 'menucv')) {
 let menuX = `
@@ -242,7 +240,7 @@ let menuX = `
 ╟⊰ 🝪 _${usedPrefix}tourl *<video / imagen / audio>*_
 ╚═══❖•ೋ°ㅤ✚ㅤ°ೋ•❖═══╛
 `.trim()
-await conn.sendFile(m.chat, pp, 'Menu.jpg', menuX, m, null, fkontak)
+await conn.sendMessage(m.chat, {image: pp, caption: menuX}, {quoted: fkontak});
 }
     if (command == 'menuel' || (command == 'menuefectosl')) {
 let menuX = `
@@ -265,7 +263,7 @@ let menuX = `
 ╟⊰ 🜳 _${usedPrefix}blur_
 ╚═══❖•ೋ°ㅤ✚ㅤ°ೋ•❖═══╛
 `.trim()
-await conn.sendFile(m.chat, pp, 'Menu.jpg', menuX, m, null, fkontak)
+await conn.sendMessage(m.chat, {image: pp, caption: menuX}, {quoted: fkontak});
 }
     if (command == 'menuefectosa' || (command == 'menuea')) {
 let menuX = `
@@ -290,7 +288,7 @@ let menuX = `
 ╟⊰ ☊ _${usedPrefix}tupai_
 ╚═══❖•ೋ°ㅤ✚ㅤ°ೋ•❖═══╛
 `.trim()
-await conn.sendFile(m.chat, pp, 'Menu.jpg', menuX, m, null, fkontak)
+await conn.sendMessage(m.chat, {image: pp, caption: menuX}, {quoted: fkontak});
 }
     if (command == 'menutools' || (command == 'menutls')) {
 let menuX = `
@@ -324,12 +322,11 @@ let menuX = `
 ╟⊰ ☭ _${usedPrefix}qrcode *<texto>*_
 ╟⊰ ☭ _${usedPrefix}readmore *<texto1 | texto2>*_
 ╟⊰ ☭ _${usedPrefix}styletext *<texto>*_
-╟⊰ ☭ _${usedPrefix}covid *<pais>*_
 ╟⊰ ☭ _${usedPrefix}horario_
-╟⊰ ☭ _${usedPrefix}traducir *<texto>*_
+╟⊰ ☭ _${usedPrefix}traducir *<idioma> <texto>*_
 ╚═══❖•ೋ°ㅤ✚ㅤ°ೋ•❖═══╛
 `.trim()
-await conn.sendFile(m.chat, pp, 'Menu.jpg', menuX, m, null, fkontak)
+await conn.sendMessage(m.chat, {image: pp, caption: menuX}, {quoted: fkontak});
 }
        if (command == 'menurpg' || (command == 'menueconomia')) {
 let menuX = `
@@ -362,7 +359,7 @@ let menuX = `
 ╟⊰ ⛨ _${usedPrefix}unreg *<numero de serie>*_
 ╚═══❖•ೋ°ㅤ✚ㅤ°ೋ•❖═══╛
 `.trim()
-await conn.sendFile(m.chat, pp, 'Menu.jpg', menuX, m, null, fkontak)
+await conn.sendMessage(m.chat, {image: pp, caption: menuX}, {quoted: fkontak});
 }
        if (command == 'menuowner' || (command == 'menumods')) {
 let menuX = `
@@ -416,7 +413,7 @@ let menuX = `
 ╟⊰ 🜲 _${usedPrefix}listcmd_
 ╚═══❖•ೋ°ㅤ✚ㅤ°ೋ•❖═══╛
 `.trim()
-await conn.sendFile(m.chat, pp, 'Menu.jpg', menuX, m, null, fkontak)
+await conn.sendMessage(m.chat, {image: pp, caption: menuX}, {quoted: fkontak});
 }
        if (command == 'menuinfobot' || (command == 'menuib')) {
 let menuX = `
@@ -438,14 +435,13 @@ let menuX = `
 ├ ✇ _Bot *(𝚄𝚜𝚘 𝚂𝚒𝚗 𝙿𝚛𝚎𝚏𝚒𝚓𝚘)*_
 ┕⊰᯽⊱┈──╌❊ㅤ⇓ㅤ❊╌──┈⊰᯽⊱
 `.trim()
-await conn.sendFile(m.chat, pp, 'Menu.jpg', menuX, m, null, fkontak)
+await conn.sendMessage(m.chat, {image: pp, caption: menuX}, {quoted: fkontak});
 }
     if (command == 'menu7') {
 let menuX = `👻 Hola! *${username}*\n
 XDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
 `.trim()
-await conn.sendFile(m.chat, pp, 'Menu.jpg', menuX, m, null, fkontak)
-}
+await conn.sendMessage(m.chat, {image: pp, caption: menuX}, {quoted: fkontak});}
 }
 handler.help = ['menu0', 'menu3', 'menu4']
 handler.tags = ['main']
