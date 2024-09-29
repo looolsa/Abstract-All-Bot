@@ -1,10 +1,9 @@
-// creditos a https://github.com/FG98F
 const handler = async (m, {conn, isPrems}) => {
-  const hasil = Math.floor(Math.random() * 5000);
-  const time = global.db.data.users[m.sender].lastwork + 600000;
-  if (new Date - global.db.data.users[m.sender].lastwork < 600000) throw `*[ 💠 ] Debes esperar mínimo ${msToTime(time - new Date())} para volver a trabajar.*`;
+  const hasil = Math.floor(Math.random() * 50000);
+  const time = global.db.data.users[m.sender].lastwork + 100000;
+  if (new Date - global.db.data.users[m.sender].lastwork < 100000) throw `*[ 💠 ] Debes esperar mínimo ${msToTime(time - new Date())} para volver a trabajar.*`;
 
-  m.reply(`${pickRandom(global.work)} *${hasil} XP*`);
+  m.reply(`*[ ▫️ ] ${pickRandom(global.work)} ${hasil} XP*`);
   global.db.data.users[m.sender].lastwork = new Date * 1;
 };
 handler.help = ['work'];
