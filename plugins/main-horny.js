@@ -60,8 +60,10 @@ if (!db.data.chats[m.chat].modohorny && m.isGroup) throw global.adult;
 ├⊰ 🝉.- _${usedPrefix}rule34_
 ┕⊰᯽⊱┈──╌❊ㅤ⇓ㅤ❊╌──┈⊰᯽⊱
 *└*B̷y̷. 𝙰𝚋𝚜𝚝𝚛𝚊𝚌𝚝 - 𝙰𝚕𝚕 - 𝙱𝚘𝚝`.trim();
+      
+      const fkontak2 = {'key': {'participants': '0@s.whatsapp.net', 'remoteJid': 'status@broadcast', 'fromMe': false, 'id': 'Halo'}, 'message': {'contactMessage': {'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}, 'participant': '0@s.whatsapp.net'};
     if (m.isGroup) {
-      await conn.sendMessage(m.chat, {image: pp, caption: str.trim(), mentions: [...str.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net')}, {quoted: m});
+      await conn.sendMessage(m.chat, {image: pp, caption: str.trim(), mentions: [...str.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net')}, {quoted: fkontak2});
     } else {
       const fkontak2 = {'key': {'participants': '0@s.whatsapp.net', 'remoteJid': 'status@broadcast', 'fromMe': false, 'id': 'Halo'}, 'message': {'contactMessage': {'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}, 'participant': '0@s.whatsapp.net'};
       await conn.sendMessage(m.chat, {image: pp, caption: str.trim(), mentions: [...str.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net')}, {quoted: fkontak2});
@@ -71,7 +73,7 @@ if (!db.data.chats[m.chat].modohorny && m.isGroup) throw global.adult;
   }
 };
 handler.command = /^(menu18|pornito|menuh)$/i;
-handler.owner = true;
+
 handler.exp = 50;
 handler.fail = null;
 export default handler;
