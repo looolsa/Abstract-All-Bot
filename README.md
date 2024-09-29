@@ -43,7 +43,7 @@
 ## `🕊️.- Agradecimientos especiales:` 
 <a href="https://github.com/BrunoSobrino"><img src="https://github.com/BrunoSobrino.png" width="250" height="250" alt="BrunoSobrino"/></a>
 <a href="https://github.com/FG98F"><img src="https://github.com/FG98F.png" width="250" height="250" alt="FG98F"/></a>
-Q.E.P.D: Mr. Shady.
+<a href="https://wa.me/5215549715429&type=phone_number&app_absent=0"><img src="https://i.ibb.co/GQJWLdy/Abstract-All.webp" width="250" height="250" alt="Q.E.P.D: Mr. Shady."/></a>
 
 ------------------
 
