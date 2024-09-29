@@ -1,160 +1,164 @@
 const handler = async (m, {conn, usedPrefix, command, args, isOwner, isAdmin, isROwner}) => {
-  const optionsFull = `*Opción:* ✨ | WELCOME
-*Comando:* ${usedPrefix + command} welcome
-*Descripción:* Activa o desactiva la bienvenida en el grupo.
+  const optionsFull = `*[ 💠 ] LISTA DE OPCIONES DISPONIBLES:*
+
+*♽.- Opción:* _Welcome._
+*🝱.- Comando:* _${usedPrefix + command} welcome_
+*⛨.- Desc.:* _Activa o desactiva la opción de bienvenida y despedida en chats grupales._
+*♕.- Extra:* _Únicamente para los administradores en chats grupales._
+
+⊰᯽⊱┈─────╌❊ㅤ⇑ㅤ❊╌─────┈⊰᯽⊱
+
+*♽.- Opción:* _Modo Público._
+*🝱.- Comando:* _${usedPrefix + command} public_
+*⛨.- Desc.:* _El Bot se vuelve de uso público y/o privado._
+*♕.- Extra:* _Únicamente para el creador y colaboredores del bot._
+
+⊰᯽⊱┈─────╌❊ㅤ⇑ㅤ❊╌─────┈⊰᯽⊱
+
+*♽.- Opción:* _Modo Horny *(+18)*._
+*🝱.- Comando:* _${usedPrefix + command} modohorny_
+*⛨.- Desc.:* _Activa o desactiva los comandos para adultos en chats grupales *(No aplica en chat privado).*_
+*♕.- Extra:* _Únicamente para los administradores en chats grupales._
+
+⊰᯽⊱┈─────╌❊ㅤ⇑ㅤ❊╌─────┈⊰᯽⊱
+
+*♽.- Opción:* _Anti-Link(s)._
+*🝱.- Comando:* _${usedPrefix + command} antilink_
+*⛨.- Desc.:* _Activa o desactiva el modo anti-enlaces de WhatsApp en chats grupales._
+*♕.- Extra:* _Únicamente para los administradores en chats grupales. Necesitas la opción *"restrict"* activa._
+
+⊰᯽⊱┈─────╌❊ㅤ⇑ㅤ❊╌─────┈⊰᯽⊱
+
+*♽.- Opción:* _Anti-Link(s) 2._
+*🝱.- Comando:* _${usedPrefix + command} antilink2_
+*⛨.- Desc.:* _Activa o desactiva el modo anti-enlaces en chats grupales *(inicio en "https://")*._
+*♕.- Extra:* _Únicamente para los administradores en chats grupales. Necesitas la opción *"restrict"* activa._
+
+⊰᯽⊱┈─────╌❊ㅤ⇑ㅤ❊╌─────┈⊰᯽⊱
+
+*♽.- Opción:* _Detect._
+*🝱.- Comando:* _${usedPrefix + command} detect_
+*⛨.- Desc.:* _Activa o desactiva las notificaciones de cambios en chats grupales._
+*♕.- Extra:* _Únicamente para los administradores en chats grupales._
+
+⊰᯽⊱┈─────╌❊ㅤ⇑ㅤ❊╌─────┈⊰᯽⊱
+
+*♽.- Opción:* _Detect 2._
+*🝱.- Comando:* _${usedPrefix + command} detect2_
+*⛨.- Desc.:* _Detecta modificaciones en chats grupales y mantiene una mejor gestión._
+*♕.- Extra:* _Únicamente para los administradores en chats grupales._
+
+⊰᯽⊱┈─────╌❊ㅤ⇑ㅤ❊╌─────┈⊰᯽⊱
+
+*♽.- Opción:* _Restrict._
+*🝱.- Comando:* _${usedPrefix + command} restrict_
+*⛨.- Desc.:* _Activa o desactiva *todas* las restricciones en el bot._
+*♕.- Extra:* _Únicamente para el creador y colaboredores del bot._
+
+⊰᯽⊱┈─────╌❊ㅤ⇑ㅤ❊╌─────┈⊰᯽⊱
+
+*♽.- Opción:* _Auto Read._
+*🝱.- Comando:* _${usedPrefix + command} autoread_
+*⛨.- Desc.:* _Todos los mensajes enviados al chat privado del bot serán marcados como "leído" automáticamente._
+*♕.- Extra:* _Únicamente para el creador y colaboredores del bot._
+
+⊰᯽⊱┈─────╌❊ㅤ⇑ㅤ❊╌─────┈⊰᯽⊱
+
+*♽.- Opción:* _Auto Stickers._
+*🝱.- Comando:* _${usedPrefix + command} autosticker_
+*⛨.- Desc.:* _Todas las imagenes/videos serán convertidos a stickers automáticamente._
+*♕.- Extra:* _Únicamente para los administradores en chats grupales._
+
+⊰᯽⊱┈─────╌❊ㅤ⇑ㅤ❊╌─────┈⊰᯽⊱
+
+*♽.- Opción:* _PV Only._
+*🝱.- Comando:* _${usedPrefix + command} pvonly_
+*⛨.- Desc.:* _El bot únicamente funcionará en chats privados._
+*♕.- Extra:* _Únicamente para el creador y colaboredores del bot._
+
+⊰᯽⊱┈─────╌❊ㅤ⇑ㅤ❊╌─────┈⊰᯽⊱
+
+*♽.- Opción:* _GC Only._
+*🝱.- Comando:* _${usedPrefix + command} gconly_
+*⛨.- Desc.:* _El bot únicamente funcionará en chats grupales._
+*♕.- Extra:* _Únicamente para el creador y colaboredores del bot._
+
+⊰᯽⊱┈─────╌❊ㅤ⇑ㅤ❊╌─────┈⊰᯽⊱
+
+*♽.- Opción:* _AntiViewOnce._
+*🝱.- Comando:* _${usedPrefix + command} antiviewonce_
+*⛨.- Desc.:* _Todos los archivos multimedia configurados con una única visualización, serán enviados por el bot._
+*♕.- Extra:* _Únicamente para los administradores en chats grupales._
+
+⊰᯽⊱┈─────╌❊ㅤ⇑ㅤ❊╌─────┈⊰᯽⊱
+
+*♽.- Opción:* _Anti Call._
+*🝱.- Comando:* _${usedPrefix + command} anticall_
+*⛨.- Desc.:* _El Bot bloquerá a todas las personas que lo llamen._
+*♕.- Extra:* _Únicamente para el creador y colaboredores del bot._
+
+⊰᯽⊱┈─────╌❊ㅤ⇑ㅤ❊╌─────┈⊰᯽⊱
+
+*♽.- Opción:* _Anti Privado._
+*🝱.- Comando:* _${usedPrefix + command} antiprivado_
+*⛨.- Desc.:* _El Bot bloquerá a todas las personas que escriban en el chat privado._
+*♕.- Extra:* _Únicamente para el creador y colaboredores del bot._
+
+⊰᯽⊱┈─────╌❊ㅤ⇑ㅤ❊╌─────┈⊰᯽⊱
+
+*♽.- Opción:* _Anti Toxic._
+*🝱.- Comando:* _${usedPrefix + command} antitoxic_
+*⛨.- Desc.:* Se detectan las malas palabras y se advierte al participante del grupo previamente a ser eliminado *(Únicamente chats grupales)*._
+*♕.- Extra:* _Únicamente para los administradores en chats grupales. Necesitas la opción *"restrict"* activa._
+
+⊰᯽⊱┈─────╌❊ㅤ⇑ㅤ❊╌─────┈⊰᯽⊱
+
+*♽.- Opción:* _Anti Trabas._
+*🝱.- Comando:* _${usedPrefix + command} antitraba_
+*⛨.- Desc.:*  _El Bot detecta todos los textos largos que podrían causar lentitud y elimina al usuario *(Únicamente chats grupales)*._
+*♕.- Extra:* _Únicamente para los administradores en chats grupales. Necesitas la opción *"restrict"* activa._
+
+⊰᯽⊱┈─────╌❊ㅤ⇑ㅤ❊╌─────┈⊰᯽⊱
+
+*♽.- Opción:* _Anti Arabes._
+*🝱.- Comando:* _${usedPrefix + command} antiarabes_
+*⛨.- Desc.:* _Si un número árabe entra a un chat grupal, este lo elimina automáticamente._
+*♕.- Extra:* _Únicamente para los administradores en chats grupales. Necesitas la opción *"welcome"* y *"restrict"* activa._
+
+⊰᯽⊱┈─────╌❊ㅤ⇑ㅤ❊╌─────┈⊰᯽⊱
+
+*♽.- Opción:* _Anti Arabes 2._
+*🝱.- Comando:* _${usedPrefix + command} antiarabes2_
+*⛨.- Desc.:* _Si un número árabe escribe en un chat grupal, este lo elimina automáticamente._
+*♕.- Extra:* _Únicamente para los administradores en chats grupales. Necesitas la opción *"restrict"* activa._
+
+⊰᯽⊱┈─────╌❊ㅤ⇑ㅤ❊╌─────┈⊰᯽⊱
+
+*♽.- Opción:* _Modo Jadi Bot._
+*🝱.- Comando:* _${usedPrefix + command} modejadibot_
+*⛨.- Desc.:* _Activa o desactiva el uso de SubBots para los usuarios._
+*♕.- Extra:* _Únicamente para el creador y colaboredores del bot._
+
+⊰᯽⊱┈─────╌❊ㅤ⇑ㅤ❊╌─────┈⊰᯽⊱
+
+*♽.- Opción:* _Modo Admin._
+*🝱.- Comando:* _${usedPrefix + command} modoadmin_
+*⛨.- Desc.:* _El bot únicamente responde comandos para los administradores en chats grupales._
+*♕.- Extra:* _Únicamente para los administradores en chats grupales._
+
+⊰᯽⊱┈─────╌❊ㅤ⇑ㅤ❊╌─────┈⊰᯽⊱
+
+*♽.- Opción:* _Modo SimSimi._
+*🝱.- Comando:* _${usedPrefix + command} simsimi_
+*⛨.- Desc.:* _El bot responde automáticamente utilizando la IA de simsimi._
+*♕.- Extra:* _Únicamente para los administradores en chats grupales._
 
 --------------------------------
 
-*Opción:* 🌎 | MODO PUBLICO
-*Comando:* ${usedPrefix + command} public
-*Descripción:* El Bot se vuelve de uso publico y/o privado.
-*Nota:* Este comando solo podrá ser usado por owners del Bot.
-
---------------------------------
-
-*Opción:* 🥵 | MODO HORNY
-*Comando:* ${usedPrefix + command} modohorny
-*Descripción:* Activa o desactiva los comandos +18 en el grupo.
-
---------------------------------
-
-*Opción:* 🔗 | ANTILINK
-*Comando:* ${usedPrefix + command} antilink
-*Descripción:* Activa o desactiva el anti-enlaces de WhatsApp.
-*Nota:* Se necesita tener activo el restrict.
-
---------------------------------
-
-*Opción:* 🔗 | ANTILINK 2
-*Comando:* ${usedPrefix + command} antilink2
-*Descripción:* Activa o desactiva el anti-enlaces que inician en HTTPS.
-*Nota:* Se necesita tener activo el restrict.
-
---------------------------------
-
-*Opción:* 🔎 | DETECT
-*Comando:* ${usedPrefix + command} detect
-*Descripción:* Activa o desacriva las notificaciones de cambios en el grupo.
-
---------------------------------
-
-*Opción:* 🔎 | DETECT 2
-*Comando:* ${usedPrefix + command} detect2
-*Descripción:* Detecta modificaciones en el grupo y mantiene una mejor gestion.
-
---------------------------------
-
-*Opción:* ❗ | RESTRICT
-*Comando:* ${usedPrefix + command} restrict
-*Descripción:* Activa o desactiva las restricciones del Bot, como la de sacar o agregar personas a un grupo.
-*Nota:* Este comando solo podrá ser usado por owners del Bot.
-
---------------------------------
-
-*Opción:* ☑️ | AUTOREAD
-*Comando:* ${usedPrefix + command} autoread
-*Descripción:* Marca como leido los mensajes y los estados automáticamente.
-*Nota:* Este comando solo podrá ser usado por owners del Bot.
-
---------------------------------
-
-*Opción:* 🔊 | AUDIOS
-*Comando:* ${usedPrefix + command} audios
-*Descripción:* Activa o desactiva los comandos de audios sin prefijos, en el grupo.
-
---------------------------------
-
-*Opción:* 👾 | AUTOSTICKER
-*Comando:* ${usedPrefix + command} autosticker 
-*Descripción:* Todas las imagenes o videos enviados en el grupo se convierten en stickers. 
-
---------------------------------
-
-*Opción:* 💬 | PCONLY
-*Comando:* ${usedPrefix + command} pconly
-*Descripción:* El Bot solo responderá a los comandos si es un chat privado.
-*Nota:* Este comando solo podrá ser usado por owners del Bot.
-
---------------------------------
-
-*Opción:* 🏢 | GCONLY
-*Comando:* ${usedPrefix + command} gconly
-*Descripción:* El Bot solo respondera a los comandos si es un grupo. 
-*Nota:* Este comando solo podrá ser usado por owners del Bot.
-
---------------------------------
-
-*Opción:* ❌ | ANTIVIEWONCE 
-*Comando:* ${usedPrefix + command} antiviewonce
-*Descripción:* Las imagenes enviadas para ver solo una vez, son reenviadas normal por el Bot. 
-
---------------------------------
-
-*Opción:* 📵 | ANTILLAMADAS
-*Comando:* ${usedPrefix + command} anticall
-*Descripción:* El Bot bloquerá a las personas que llamen al Bot. 
-*Nota:* Este comando solo podra ser usado por owners del Bot.
-
---------------------------------
-
-*Opción:* 💬 | ANTIPRIVADO
-*Comando:* ${usedPrefix + command} antiprivado
-*Descripción:* El Bot bloquerá a las personas que escriban al privado del Bot. 
-*Nota:* Este comando solo podrá ser usado por owners del Bot.
-
---------------------------------
-
-*Opción:* 🤬 | ANTITOXIC
-*Comando:* ${usedPrefix + command} antitoxic
-*Descripción:* Detecta la malas palabras y advierte al participante del grupo, antes de ser eliminado.
-*Nota:* Se necesita tener activo el restrict.
-
---------------------------------
-
-*Opción:* 🕸️ | ANTITRABAS
-*Comando:* ${usedPrefix + command} antitraba
-*Descripción:* El Bot detecta textos largos que podrian ser virus y causar lag en el chat y elimina al usuario.
-*Nota:* Se necesita tener activo el restrict.
-
---------------------------------
-
-*Opción:* 👎 | ANTIARABES
-*Comando:* ${usedPrefix + command} antiarabes
-*Descripción:* Si un numero árabe se uné al grupo, el Bot lo elimina automaticamente.
-*Nota:* Se necesita tener activo el welcome y el restrict.
-
---------------------------------
-
-*Opción:* 👎 | ANTIARABES 2
-*Comando:* ${usedPrefix + command} antiarabes2
-*Descripción:* Si un numero árabe escribe en el grupo, el Bot lo elimina automaticamente.
-*Nota:* Se necesita tener activo el restrict.
-
---------------------------------
-
-*Opción:* 🤖 | MODEJADIBOT
-*Comando:* ${usedPrefix + command} modejadibot
-*Descripción:* Activa o desactiva el uso del comando para sub bots (${usedPrefix}serbot / ${usedPrefix}jadibot). 
-*Nota:* Este comando solo podrá ser usado por owners del Bot.
-
---------------------------------
-
-*Opción:* 👑 | MODOADMIN
-*Comando:* ${usedPrefix + command} modoadmin
-*Descripción:* El Bot solo responderá a los admins del grupo.
-
---------------------------------
-
-*Opción:* 😃 | SIMSIMI
-*Comando:* ${usedPrefix + command} simsimi
-*Descripción:* El Bot empezará a responder a los mensajes usando la IA de SimSimi.
-
---------------------------------
-
-*Opción:* ⏳ | ANTISPAM
-*Comando:* ${usedPrefix + command} antispam
-*Descripción:* El Bot detecta cuando un usuario hace spam de comando y lo banea por 5 segundos y lo advierte.
-*Nota:* Este comando solo podrá ser usado por owners del Bot.`.trim();
+*♽.- Opción:* _Anti Spam._
+*🝱.- Comando:* _${usedPrefix + command} antispam_
+*⛨.- Desc.:* _El bot detecta si un usuario usa más de un comando aceleradamente, lo banea por 5 segundos y lo advierte._
+*♕.- Extra:* _Únicamente para el creador y colaboredores del bot._`.trim();
 
   const isEnable = /true|enable|(turn)?on|1/i.test(command);
   const chat = global.db.data.chats[m.chat];
@@ -430,7 +434,7 @@ const handler = async (m, {conn, usedPrefix, command, args, isOwner, isAdmin, is
       if (!/[01]/.test(command)) return await conn.sendMessage(m.chat, {text: optionsFull}, {quoted: m});
       throw false;
   }
-  conn.sendMessage(m.chat, {text: `🗂️ 𝐎𝐏𝐂𝐈𝐎𝐍: ${type}\n🎚️ 𝐄𝐒𝐓𝐀𝐃𝐎: ${isEnable ? 'ACTIVADO' : 'DESACTIVADO'}\n📣 𝐏𝐀𝐑𝐀: ${isAll ? 'ESTE BOT' : isUser ? '' : 'ESTE CHAT'}`}, {quoted: m});
+  conn.sendMessage(m.chat, {text: `*[ 💠 ] Opción:* ${type}\n\n*⚕️.- Estado:* ${isEnable ? '_Activo._' : '_Inactivo._'}\n*🔹.- Para:* ${isAll ? '_Este bot._' : isUser ? '' : '_Este chat._'}`}, {quoted: m});
 };
 handler.help = ['en', 'dis'].map((v) => v + 'able <option>');
 handler.tags = ['group', 'owner'];
