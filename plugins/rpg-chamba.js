@@ -1,7 +1,7 @@
 const handler = async (m, {conn, isPrems}) => {
 
   const user = global.db.data.users[m.sender];
-  const exp = Math.floor(Math.random() * 50000);
+  const exp = Math.floor(Math.random() * 5000);
   const time = global.db.data.users[m.sender].lastchamba + 15000;
   if (new Date - global.db.data.users[m.sender].lastchamba < 15000) throw `*[ 💠 ] Perate ${msToTimee(time - new Date())} pa chambiar*`;
 let texto = `*[ 🔥 ] ${pickRandom(global.chamba)} ${exp} XP*`
