@@ -6,7 +6,7 @@ const configuration = new Configuration({organization: global.openai_org_id, api
 const openaiii = new OpenAIApi(configuration);
 const handler = async (m, {conn, text, usedPrefix, command}) => {
 if (usedPrefix == 'a' || usedPrefix == 'A') return;
-if (!text) throw `*[ 💠 ] Ingresa una petición para acceder a la ia "Delirius"*`    
+if (!text) throw `*[ 💠 ] Ingresa una petición para interactuar con Delirius.*`    
 
 if (command == 'delirius') {
 try {
