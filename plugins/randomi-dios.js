@@ -1,3 +1,4 @@
+/*
 export async function before(m, { conn, isAdmin, isBotAdmin }) {
     let who = m.quoted ? m.quoted.sender : m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
     if (m.isBaileys && m.fromMe) return !0;
@@ -11,3 +12,4 @@ export async function before(m, { conn, isAdmin, isBotAdmin }) {
 
     return !0;
 }
+*/
