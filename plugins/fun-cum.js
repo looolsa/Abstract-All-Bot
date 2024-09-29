@@ -1,6 +1,5 @@
 const handler = async (m, { conn, command, text }) => {
     let who = m.quoted ? m.quoted.sender : m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
-if (!who) throw `Ingresa el tag de alguien o responde a un mensaje`
     const links = [
         'https://telegra.ph/file/af8730d631d721927970f.mp4',
         'https://telegra.ph/file/7175b97490bbeb95276b5.mp4',
@@ -14,8 +13,18 @@ if (!who) throw `Ingresa el tag de alguien o responde a un mensaje`
         'https://telegra.ph/file/76340e72d6ca207f363b4.mp4',
         'https://telegra.ph/file/a7adc360176eb8198925f.mp4'
     ]
+    const mmsg = [
+        ' HA EYACULADO EN ',
+        ' SE HA CORRIDO ENCIMA DE ',
+        ' AMBASIGNEÓ EN ',
+        ' AMBATUKAMEÓ LA JETA DE ',
+        ' BUSTEÓ EN LA CARA DE ',
+        ' SE CORRIÓ BIEN MASCIZO ENCIMA DE ',
+        ' LA JALÓ ACÁ BIEN RICO Y SE VINO EN ',
+        ' HIZO UN FLAN DE LECHE Y SE LO ECHÓ A '
+    ]
     let url = pickRandom(links);
-const caption = `*[ 🔥 ] @${m.sender.split('@')[0]} SE HA CORRIDO EN @${who.split('@')[0]}*`
+const caption = `*[ 🔥 ] @${m.sender.split('@')[0]}` + mmsg.getRandom() + `@${who.split('@')[0]}*`
 	if (!who) throw `Pon el tag`
 	await conn.sendMessage(m.chat, { video: { url:url }, gifPlayback: true, caption: caption, mentions: conn.parseMention(caption) }, m);
 };
