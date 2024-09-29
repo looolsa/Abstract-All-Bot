@@ -18,10 +18,13 @@ if (!who) throw `Ingresa el tag de alguien o responde a un mensaje`;
         'https://telegra.ph/file/733b05baeebfc58dbd581.mp4',
         'https://telegra.ph/file/78364d8173c46e4634410.mp4',
         'https://telegra.ph/file/8d6036a8d97bc8fb33fb4.mp4'
-
+    ]
+    let mmsg = [
+        ' LE DIÓ UNA PALMADITA A ',
+        ' ACARICIÓ A ',
     ]
     let url = pickRandom(links);
-const caption = `*[ 🕊️ ] @${m.sender.split('@')[0]} LE DIÓ UNA PALMADITA A @${who.split('@')[0]}*`;
+const caption = `*[ 🕊️ ] @${m.sender.split('@')[0]}` + mmsg.getRandom() + `@${who.split('@')[0]}*`;
 	if (!who) throw `Pon el tag`;
 	await conn.sendMessage(m.chat, { video: { url:url }, gifPlayback: true, caption: caption, mentions: conn.parseMention(caption) }, m);
 };
