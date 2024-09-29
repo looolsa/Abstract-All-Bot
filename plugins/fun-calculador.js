@@ -1,78 +1,78 @@
 const handler = async (m, {conn, command, text, usedPrefix}) => {
-  if (!text) throw `*[❗𝐈𝐍𝐅𝐎❗] 𝙸𝙽𝙶𝚁𝙴𝚂𝙴 𝙴𝙻 @tag 𝙳𝙴 𝙰𝙻𝙶𝚄𝙽 𝙿𝙰𝚁𝚃𝙸𝙲𝙸𝙿𝙰𝙽𝚃𝙴 𝙳𝙴𝙻 𝙶𝚁𝚄𝙿𝙾 𝙾 𝙴𝙻 𝙽𝙾𝙼𝙱𝚁𝙴 𝙳𝙴 𝙻𝙰 𝙿𝙴𝚁𝚂𝙾𝙽𝙰*`;
+  if (!text) throw `*[ 💠 ] Proporciona la mención para hacer el cálculo.*`;
   if (command == 'gay2') {
     conn.reply(m.chat, `
-_*${text.toUpperCase()}* *ES 🏳️‍🌈* *${(500).getRandom()}%* *GAY*_
+*[ 🏳️‍🌈 ] _${text.toUpperCase()} es ${(500).getRandom()}% GAY._*\n\n_⚕️.- Un asco este maldito gay..._
 `.trim(), m, m.mentionedJid ? {
   mentions: m.mentionedJid,
 } : {});
   }
   if (command == 'lesbiana') {
     conn.reply(m.chat, `
-_*${text.toUpperCase()}* *ES 🏳️‍🌈* *${(500).getRandom()}%* *${command.replace('how', '').toUpperCase()}*_
+*[ 🏳️‍🌈 ] _${text.toUpperCase()} es ${(500).getRandom()}% ${command.replace('how', '').toUpperCase()}_*\n\n_⚕️.- Tremenda..._
 `.trim(), m, m.mentionedJid ? {
   mentions: m.mentionedJid,
 } : {});
   }
   if (command == 'pajero') {
     conn.reply(m.chat, `
-_*${text.toUpperCase()}* *ES 😏💦* *${(500).getRandom()}%* *${command.replace('how', '').toUpperCase()}*_
+*[ 💦 ] _${text.toUpperCase()} es ${(500).getRandom()}% ${command.replace('how', '').toUpperCase()}_*\n\n_⚕️.- Maldito adicto al porno..._
 `.trim(), m, m.mentionedJid ? {
   mentions: m.mentionedJid,
 } : {});
   }
   if (command == 'pajera') {
     conn.reply(m.chat, `
-_*${text.toUpperCase()}* *ES 😏💦* *${(500).getRandom()}%* *${command.replace('how', '').toUpperCase()}*_
+*[ 💦 ] _${text.toUpperCase()} es ${(500).getRandom()}% ${command.replace('how', '').toUpperCase()}_*\n\n_⚕️.- Una adicta al dedazo..._
 `.trim(), m, m.mentionedJid ? {
   mentions: m.mentionedJid,
 } : {});
   }
   if (command == 'puto') {
     conn.reply(m.chat, `
-_*${text.toUpperCase()}* *ES* *${(500).getRandom()}%* *${command.replace('how', '').toUpperCase()},* *MÁS INFORMACIÓN A SU PRIVADO 🔥🥵 XD*_
+*[ 🏳️‍🌈 ] _${text.toUpperCase()} es ${(500).getRandom()}% ${command.replace('how', '').toUpperCase()}_*\n\n_⚕️.- Otro maldito homosexual de mierda..._
 `.trim(), m, m.mentionedJid ? {
   mentions: m.mentionedJid,
 } : {});
   }
   if (command == 'puta') {
     conn.reply(m.chat, `
-_*${text.toUpperCase()}* *ES* *${(500).getRandom()}%* *${command.replace('how', '').toUpperCase()},* *MÁS INFORMACIÓN A SU PRIVADO 🔥🥵 XD*_
+*[ 🔥 ] _${text.toUpperCase()} es ${(500).getRandom()}% ${command.replace('how', '').toUpperCase()}_*\n\n_🥵.- Más información en su chat privado..._
 `.trim(), m, m.mentionedJid ? {
   mentions: m.mentionedJid,
 } : {});
   }
   if (command == 'manco') {
     conn.reply(m.chat, `
-_*${text.toUpperCase()}* *ES* *${(500).getRandom()}%* *${command.replace('how', '').toUpperCase()} 💩*_
+*[ 💩 ] _${text.toUpperCase()} es ${(500).getRandom()}% ${command.replace('how', '').toUpperCase()}_*\n\n_⚕️.- XD_
 `.trim(), m, m.mentionedJid ? {
   mentions: m.mentionedJid,
 } : {});
   }
   if (command == 'manca') {
     conn.reply(m.chat, `
-_*${text.toUpperCase()}* *ES* *${(500).getRandom()}%* *${command.replace('how', '').toUpperCase()} 💩*_
+*[ 💩 ] _${text.toUpperCase()} es ${(500).getRandom()}% ${command.replace('how', '').toUpperCase()}_*\n\n_⚕️.- Tenía que ser vieja..._
 `.trim(), m, m.mentionedJid ? {
   mentions: m.mentionedJid,
 } : {});
   }
   if (command == 'rata') {
     conn.reply(m.chat, `
-_*${text.toUpperCase()}* *ES* *${(500).getRandom()}%* *${command.replace('how', '').toUpperCase()} 🐁 COME QUESO 🧀*_
+*[ 🐁 ] _${text.toUpperCase()} es ${(500).getRandom()}% ${command.replace('how', '').toUpperCase()}_*\n\n_🧀.- Pinche tragaqueso..._
 `.trim(), m, m.mentionedJid ? {
   mentions: m.mentionedJid,
 } : {});
   }
   if (command == 'prostituto') {
     conn.reply(m.chat, `
-_*${text.toUpperCase()}* *ES* *${(500).getRandom()}%* *${command.replace('how', '').toUpperCase()} 🫦👅, QUIEN QUIERE DE SUS SERVICIOS? XD*_
+*[ 🫦 ] _${text.toUpperCase()} es ${(500).getRandom()}% ${command.replace('how', '').toUpperCase()}_*\n\n_👅.- ¿Quién quiere sus servicios?_*
 `.trim(), m, m.mentionedJid ? {
   mentions: m.mentionedJid,
 } : {});
   }
   if (command == 'prostituta') {
     conn.reply(m.chat, `
-_*${text.toUpperCase()}* *ES* *${(500).getRandom()}%* *${command.replace('how', '').toUpperCase()} 🫦👅, QUIEN QUIERE DE SUS SERVICIOS? XD*_
+*[ 🫦 ] _${text.toUpperCase()} es ${(500).getRandom()}% ${command.replace('how', '').toUpperCase()}_*\n\n_👅.- ¿Quién quiere sus servicios?_
 `.trim(), m, m.mentionedJid ? {
   mentions: m.mentionedJid,
 } : {});
