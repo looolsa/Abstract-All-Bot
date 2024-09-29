@@ -4,7 +4,7 @@ import * as cheerio from 'cheerio';
 import {mediafiredl} from '@bochilteam/scraper';
 
 const handler = async (m, {conn, args, usedPrefix, command}) => {
-    if (!args[0]) throw `\`\`\`[🌺] Ingresa un link de mediafire junto al comando. Ejemplo: \n${usedPrefix + command} https://www.mediafire.com/file/r0lrc9ir5j3e2fs/DOOM_v13_UNCLONE\`\`\``;
+    if (!args[0]) throw `*[ 💠 ] Ingresa un link de mediafire para proceder con la descarga.*\n\n_⚕️.- Ejemplo:_ *${usedPrefix}mediafire* https://www.mediafire.com/file/dp2ekit57pay5rs/FNaF_1_Remastered_v2.0.2_Android.apk/file`;
   try {
     const resEX = await mediafiredl(args[0]);
     let text = `╭━━━⊜ ⌊ \`\`\`Mediafire Downloader\`\`\` ⌉⊜━━━\n`
@@ -18,9 +18,9 @@ const handler = async (m, {conn, args, usedPrefix, command}) => {
 contextInfo: { externalAdReply :{ showAdAttribution: true,
                         sourceUrl: 'https://youtube.com/watch?v=TMT9MNM-NHg',
                         mediaType: 2,
-                        description: `🍁 This bot is still in development.`,
-                        title: `🌺 Thank you for using Sylphiette, the best WhatsApp bot.`,
-                        body: `⚘ Developed by I\`m Fz ~`,          previewType: 0,
+                        description: `💠.- Hey! You can follow me on ig.`,
+                        title: `💠.- Lan say's: Thanks for all support.`,
+                        body: `𝙰𝚋𝚜𝚝𝚛𝚊𝚌𝚝-𝙰𝚕𝚕.`,          previewType: 0,
                         thumbnail: await (await fetch('https://telegra.ph/file/11c0098b4f55b2e548b90.png')).buffer(),
                         mediaUrl: 'https://www.instagram.com/lansg___/',
                         
@@ -39,11 +39,11 @@ contextInfo: { externalAdReply :{ showAdAttribution: true,
     text2 += `  _• Enviando archivo . . . ._`
       await conn.reply(m.chat, text2, m, {
 contextInfo: { externalAdReply :{ showAdAttribution: true,
-                        sourceUrl: 'https://youtube.com/watch?v=TMT9MNM-NHg',
+                        sourceUrl: 'https://www.instagram.com/lansg___/',
                         mediaType: 2,
-                        description: `🍁 This bot is still in development.`,
-                        title: `🌺 Thank you for using Sylphiette, the best WhatsApp bot.`,
-                        body: `⚘ Developed by I\`m Fz ~`,          previewType: 0,
+                        description: `💠.- Hey! You can follow me on ig.`,
+                        title: `💠.- Lan say's: Thanks for all support.`,
+                        body: `𝙰𝚋𝚜𝚝𝚛𝚊𝚌𝚝-𝙰𝚕𝚕.`,          previewType: 0,
                         thumbnail: await (await fetch('https://telegra.ph/file/11c0098b4f55b2e548b90.png')).buffer(),
                         mediaUrl: 'https://www.instagram.com/lansg___/',
                         
@@ -51,7 +51,7 @@ contextInfo: { externalAdReply :{ showAdAttribution: true,
 })
       await conn.sendFile(m.chat, link, name, '', m, null, {mimetype: mime, asDocument: true});
     } catch {
-      await m.reply(`\`\`\`[🌺] Ingresa un link de mediafire junto al comando. Ejemplo: \n${usedPrefix + command} https://www.mediafire.com/file/r0lrc9ir5j3e2fs/DOOM_v13_UNCLONE\`\`\``);
+      await m.reply(global.errori);
     }
   }
 };
