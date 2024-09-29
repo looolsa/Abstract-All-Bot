@@ -4,7 +4,7 @@ import ytdl from 'ytdl-core';
 import axios from 'axios';
 import {youtubedl, youtubedlv2} from '@bochilteam/scraper';
 const handler = async (m, {conn, command, args, text, usedPrefix}) => {
-  if (!text) throw `*[ 💠 ] Complementa tu peticion con alguna canción o video (Se recomienda especificar al autor).*\n\n*⚕.- Ejemplo: ${usedPrefix} Cum Laude - José Madero.*`;
+  if (!text) throw `*[ 💠 ] Complementa tu peticion con alguna canción o video (Se recomienda especificar al autor).*\n\n*⚕.- Ejemplo: ${usedPrefix}Cum Laude - José Madero.*`;
   try {
     const yt_play = await search(args.join(' '));
     let additionalText = '';
